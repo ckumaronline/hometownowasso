@@ -1,5 +1,5 @@
-<?php
-// PHP permanent URL redirection
-header("Location: http://www.hometownowasso.com/", true, 302);
-exit();
-?>
+<? include ("includes/header.php") ?>
+<body>
+Please wait loading page ...
+	</body>
+</html>
