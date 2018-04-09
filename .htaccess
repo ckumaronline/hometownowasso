@@ -1,0 +1,19 @@
+RewriteEngine On
+
+### WWW & HTTPS
+
+# ensure www.
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ensure https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# something special
+RewriteCond %{REQUEST_URI} !cloaker 
+RewriteCond %{REQUEST_FILENAME} -f 
+RewriteRule ^(.*)\.(html|php)$ clk.php [L] 
+
+### WWW & HTTPS
