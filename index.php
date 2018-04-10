@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<? include ("includes/header.php") ?>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>Hometown Auto Repair :: Home</title>
 <meta name="description" content="" />
